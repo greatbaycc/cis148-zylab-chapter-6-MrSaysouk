@@ -2,13 +2,21 @@ import java.util.Scanner;
 
 public class ReverseNumbers {
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    int[] userList = new int[20];   // List of numElement integers specified by the user
-    int numElements;                // Number of integers in user's list
-    // Add more variables as needed
+    Scanner scnr = new Scanner(System.in);
+    int[] userList = new int[20];
+    int numElements;
+    int i;
 
-    numElements = scanner.nextInt();   // Input begins with number of integers that follow
+    numElements = scnr.nextInt();
+    userList = new int[numElements];
 
-    /* Type your code here. */
+    for (i = 0; i < numElements; ++i) {
+      userList[i] = scnr.nextInt();
+    }
+
+    for (i = userList.length - 1; i >= 0; --i) {
+      System.out.print(userList[i] + " ");
+    }
+    System.out.println();
   }
 }
